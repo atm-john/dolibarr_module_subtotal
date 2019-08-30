@@ -1787,6 +1787,29 @@ class ActionsSubtotal
 		return 0;
 	}
 
+	function printPDFline($parameters=array(), &$pdfModel, &$action){
+		global $conf;
+
+		$object = $parameters['object'];
+		$i = $parameters['i'];
+		$pdf =& $parameters['pdf'];
+		$curY =& $parameters['curY'];
+		$nexY =& $parameters['nexY'];
+		$outputlangs = $parameters['outputlangs'];
+		$hidedetails = $parameters['hidedetails'];
+
+		$hideInnerLines = (int)GETPOST('hideInnerLines');
+		$hidedetails = (int)GETPOST('hidedetails');
+
+		/*if($this->isNewPdfColumnSystem($pdfModel))
+		{
+
+		}*/
+
+	}
+
+
+
 	function pdf_writelinedesc($parameters=array(), &$object, &$action)
 	{
 		/**
